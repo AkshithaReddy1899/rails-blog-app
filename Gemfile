@@ -76,3 +76,6 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 group :development, :test do
   gem 'rspec-rails', '~> 6.0.0.rc1'
 end
+
+gem "ffi"
+gem "rails-controller-testing"
