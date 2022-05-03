@@ -1,3 +1,19 @@
-<h1>Users</h1>
-
-<p>List of users</p>
+<div class="users-container">
+  <% if @users.blank? %>
+	<p>There are no users</p>
+	<% else %>
+  <% @users.each do |user| %>
+	  <a href="/users/<%= user.id%>" class="user-container">
+		  <div class="user">
+	      <div class="user-img">
+		      <%= image_tag("user.png")%>
+		    </div>
+	      <div class="user-text">
+		      <h2 class="user-heading"><%= user.Name %></h2>
+			    <p class="user-posts">Number of posts: <%= user.PostsCounter%></p>
+		    </div>
+			</div>
+	  </a>
+	<% end %>
+	<% end %>
+</div>

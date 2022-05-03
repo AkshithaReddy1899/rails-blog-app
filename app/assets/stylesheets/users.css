@@ -1,0 +1,38 @@
+.users-container {
+	padding: 20px;
+	margin: 10px;
+	font-family: sans-serif;
+}
+
+.user {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.user-container {
+	text-decoration: none;
+}
+
+.user-img img {
+	width: 80px;
+	height: 80px;
+}
+
+.user-text {
+	border: 2px solid black;
+	width: 80%;
+	height: 80px;
+	padding: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.user-heading {
+	font-size: 2.2rem;
+	font-weight: 300;
+	padding: 0 15px;
+	color: black;
+}
