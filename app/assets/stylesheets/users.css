@@ -21,7 +21,6 @@
 }
 
 .user-text {
-	border: 2px solid black;
 	width: 80%;
 	height: 80px;
 	padding: 5px;
@@ -35,4 +34,8 @@
 	font-weight: 300;
 	padding: 0 15px;
 	color: black;
+}
+
+.border {
+	border: 1px solid black;
 }

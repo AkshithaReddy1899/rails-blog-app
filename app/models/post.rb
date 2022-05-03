@@ -10,7 +10,7 @@ class Post < ApplicationRecord
 
   after_save :update_posts_counter
 
-  def return_five_most_recent_posts
-    Post.order('created_at DESC').limit(5)
+  def return_five_most_recent_comments
+    comments.order('created_at DESC').limit(5)
   end
 end

@@ -1,3 +1,24 @@
-<h1>Show users</h1>
-
-<p>User details</p>
+<div class="user-details">
+  <div class="user-container">
+	  <div class="user">
+	    <div class="user-img">
+		    <%= image_tag("user.png")%>
+		  </div>
+	    <div class="user-text border">
+		    <h2 class="user-heading"><%= @user.Name %></h2>
+			  <p class="user-posts">Number of posts: <%= @user.PostsCounter || 0%></p>
+		  </div>
+		</div>
+	</div>
+	<div class="user-bio border">
+	  <p>Bio</p>
+		<p><%= @user.Bio %></p>
+	</div>
+	<p>wefrd</p>
+	<% console %>
+	<% @user.return_three_most_recent_posts do |post| %>
+		post.Title
+		<p>adfsg</p>
+	<% end %>
+	kjhgf
+</div>
