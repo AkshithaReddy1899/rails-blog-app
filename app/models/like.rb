@@ -7,5 +7,4 @@ class Like < ApplicationRecord
   end
 
   after_save :update_likes_counter
-
 end

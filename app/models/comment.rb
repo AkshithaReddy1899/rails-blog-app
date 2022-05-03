@@ -7,5 +7,4 @@ class Comment < ApplicationRecord
   end
 
   after_save :update_comments_counter
-
 end
