@@ -18,16 +18,14 @@
 		<% @user.return_three_most_recent_posts.each do |post| %>
 			<div class="post-list border">
 				<div>
-					<a href="/users/<%= @user.id %>/posts">
-						<h3><%= post.Title %></h3>
-					</a>
+						<h3><%= link_to post.Title, "/users/#{@user.id}/posts" %></h3>
 					<p><%= post.Text %></p>
 				</div>
 				<p>Comments: <%= post.CommentsCounter || 0%>, Likes: <%= post.LikesCounter || 0%></p>
 			</div>
 		<% end %>
 		<div class="button-container">
-		  <a href="/users/<%= @user.id %>/posts" class="button">See all posts</a>
+		  <%= link_to 'See all posts', "/users/#{@user.id}/posts"%>	  
 		</div>
 	</div>
 </div>

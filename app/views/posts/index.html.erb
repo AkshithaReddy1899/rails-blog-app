@@ -13,9 +13,8 @@
 		</div>
 		<section>
 		  <% @user.posts.each.with_index do |p, index| %>
-			<a href="/users/<%= @user.id %>/posts/<%= p.id %>">
 				<div class="border">
-					<p><b>Post# <%=index+1%></b></p>
+					<p><b>Post# <%= link_to index+1, "/users/#{@user.id}/posts/#{p.id}"%></b></p>
 					<div><p class="post-text"><%=p.Text%></p></div>
 					<small class="post-commwnts-likes">Comments: <%= p.CommentsCounter || 0%>, Likes: <%=p.LikesCounter || 0%></small>
 					<hr/>
@@ -25,7 +24,6 @@
 						</div>
 					<% end %>
 				</div>
-			</a>
 		  <% end %>
 		</section>
 	</div>

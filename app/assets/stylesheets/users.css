@@ -3,12 +3,6 @@
   padding: 20px;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
-}
-
 .users-container {
   padding: 20px;
   margin: 10px;
