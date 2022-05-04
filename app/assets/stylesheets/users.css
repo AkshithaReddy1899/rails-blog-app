@@ -1,98 +1,98 @@
 .main-container {
-	margin: 20px;
-	padding: 20px;
+  margin: 20px;
+  padding: 20px;
 }
 
 a {
-	text-decoration: none;
-	color: black;
-	cursor: pointer;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 .users-container {
-	padding: 20px;
-	margin: 10px;
-	font-family: sans-serif;
+  padding: 20px;
+  margin: 10px;
+  font-family: sans-serif;
 }
 
 .user {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
 }
 
 .user-img img {
-	width: 80px;
-	height: 80px;
+  width: 80px;
+  height: 80px;
 }
 
 .user-text {
-	width: 80%;
-	height: 80px;
-	padding: 5px;
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
+  width: 80%;
+  height: 80px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .user-heading {
-	font-size: 2.2rem;
-	font-weight: 300;
-	padding: 0 15px;
-	color: black;
+  font-size: 2.2rem;
+  font-weight: 300;
+  padding: 0 15px;
+  color: black;
 }
 
 .border {
-	border: 1px solid black;
-	margin: 5px;
-	padding: 0 10px;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 0 10px;
 }
 
 .post-text {
-	text-align: center;
+  text-align: center;
 }
 
 .post-commwnts-likes {
-	float: right;
-	position: relative;
-	bottom: 15px;
+  float: right;
+  position: relative;
+  bottom: 15px;
 }
 
 hr {
-	width: 90%;
-	margin: 5px auto;
-	border: none;
-	border-top: 1px solid black;
+  width: 90%;
+  margin: 5px auto;
+  border: none;
+  border-top: 1px solid black;
 }
 
 .comments-container {
-	margin: 15px;
+  margin: 15px;
 }
 
 .button-container {
-	margin: 20px auto;
-	width: 120px;
-	height: 80px;
+  margin: 20px auto;
+  width: 120px;
+  height: 80px;
 }
 
 .button {
-	border: 1px solid black;
-	padding: 5px;
+  border: 1px solid black;
+  padding: 5px;
 }
 
 .post-comments-likes {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .title {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .comment-text {
-	margin: 10px auto;
-	text-align: center;
+  margin: 10px auto;
+  text-align: center;
 }
