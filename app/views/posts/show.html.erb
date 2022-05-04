@@ -1,3 +1,16 @@
-<h1>Show posts</h1>
-
-<p>Post details</p>
+<div class="main-container">
+  <div class="border">
+	  <div class="title">
+	    <p><b>Post# <%= @post.Title%></b> by <b><%= @post.author.Name%></b></p>
+		  <small class="post-comments-likes">Comments: <%= @post.CommentsCounter || 0%>, Likes: <%=@post.LikesCounter || 0%></small>
+		</div>
+		<hr>
+	  <p class="comment-text"><%=@post.Text%></p>
+		<hr>
+		<div class="comments">
+		  <% @post.comments.each do |comment| %>
+			  <p><%=comment.author.Name%> :  <%=comment.Text%> </p>
+			<%end%>
+		</div>
+	</div>
+</div>

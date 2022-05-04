@@ -1,3 +1,30 @@
-<h1>Posts</h1>
-
-<p>List of posts</p>
+<div class="main-container">
+  <div class="user-details">
+	  <div class="user-container">
+		  <section class="user">
+			  <div class="user-img">
+		      <%= image_tag("user.png")%>
+		    </div>
+				<div class="user-text border">
+			    <h2 class="user-heading"><%= @user.Name %></h2>
+			    <p class="user-posts">Number of posts: <%= @user.PostsCounter || 0%></p>
+		    </div>
+			</section>
+		</div>
+		<section>
+		  <% @user.posts.each.with_index do |p, index| %>
+				<div class="border">
+					<p><b>Post# <%= link_to index+1, "/users/#{@user.id}/posts/#{p.id}"%></b></p>
+					<div><p class="post-text"><%=p.Text%></p></div>
+					<small class="post-commwnts-likes">Comments: <%= p.CommentsCounter || 0%>, Likes: <%=p.LikesCounter || 0%></small>
+					<hr/>
+					<%p.return_five_most_recent_comments.each do |comment| %>
+						<div class="comments-container">
+							<%=comment.author.Name%> : <%=comment.Text%>
+						</div>
+					<% end %>
+				</div>
+		  <% end %>
+		</section>
+	</div>
+</div>

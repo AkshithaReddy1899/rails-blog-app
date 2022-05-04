@@ -28,6 +28,10 @@ The Blog app will be a classic example of a blog website. You will create a full
 - Rails
 - postgresql
 
+### Credits
+
+- User icon created by Becris - [Flaticon](https://www.flaticon.com/free-icons/user)
+
 ## Author
 
 👤 **Akshitha Reddy**
