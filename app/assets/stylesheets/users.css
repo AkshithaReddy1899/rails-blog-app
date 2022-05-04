@@ -1,3 +1,14 @@
+.main-container {
+	margin: 20px;
+	padding: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+
 .users-container {
 	padding: 20px;
 	margin: 10px;
@@ -9,10 +20,6 @@
 	justify-content: space-between;
 	align-items: center;
 	margin: 20px 0;
-}
-
-.user-container {
-	text-decoration: none;
 }
 
 .user-img img {
@@ -40,4 +47,25 @@
 	border: 1px solid black;
 	margin: 5px;
 	padding: 0 10px;
+}
+
+.post-text {
+	text-align: center;
+}
+
+.post-commwnts-likes {
+	float: right;
+	position: relative;
+	bottom: 15px;
+}
+
+hr {
+	width: 90%;
+	margin: 5px auto;
+	border: none;
+	border-top: 1px solid black;
+}
+
+.comments-container {
+	margin: 15px;
 }

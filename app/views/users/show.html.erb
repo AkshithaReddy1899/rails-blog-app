@@ -1,34 +1,31 @@
-<div class="user-details">
-  <div class="user-container">
-	  <div class="user">
-	    <div class="user-img">
-		    <%= image_tag("user.png")%>
-		  </div>
-	    <div class="user-text border">
-		    <h2 class="user-heading"><%= @user.Name %></h2>
-			  <p class="user-posts">Number of posts: <%= @user.PostsCounter || 0%></p>
-		  </div>
-		</div>
-	</div>
-	<div class="user-bio border">
-	  <p>Bio</p>
-		<p><%= @user.Bio %></p>
-	</div>
-	<p>wefrd</p>
-	<% @user.return_three_most_recent_posts do |post| %>
-	  post.Title
-	<% end %>
-	<%console%>
-	<% @user.return_three_most_recent_posts.each do |post| %>
-	  <div class="post-list border">
-		  <div>
-			  <a href="/users/<%= @user.id %>/posts/<%= post.id %>">
-			    <h3><%= post.Title %></h3>
-			  </a>
-			  <p><%= post.Text %></p>
+<div class="main-container">
+	<div class="user-details">
+		<div class="user-container">
+			<div class="user">
+				<div class="user-img">
+					<%= image_tag("user.png")%>
+				</div>
+				<div class="user-text border">
+					<h2 class="user-heading"><%= @user.Name %></h2>
+					<p class="user-posts">Number of posts: <%= @user.PostsCounter || 0%></p>
+				</div>
 			</div>
-			<p>Comments: <%= post.CommentsCounter || 0%>, Likes: <%= post.LikesCounter || 0%></p>
 		</div>
-	<% end %>
-	kjhgf
+		<div class="user-bio border">
+			<p>Bio</p>
+			<p><%= @user.Bio %></p>
+		</div>
+		<% console %>
+		<% @user.return_three_most_recent_posts.each do |post| %>
+			<div class="post-list border">
+				<div>
+					<a href="/users/<%= @user.id %>/posts">
+						<h3><%= post.Title %></h3>
+					</a>
+					<p><%= post.Text %></p>
+				</div>
+				<p>Comments: <%= post.CommentsCounter || 0%>, Likes: <%= post.LikesCounter || 0%></p>
+			</div>
+		<% end %>
+	</div>
 </div>
