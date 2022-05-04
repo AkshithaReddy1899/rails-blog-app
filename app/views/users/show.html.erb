@@ -15,10 +15,20 @@
 		<p><%= @user.Bio %></p>
 	</div>
 	<p>wefrd</p>
-	<% console %>
 	<% @user.return_three_most_recent_posts do |post| %>
-		post.Title
-		<p>adfsg</p>
+	  post.Title
+	<% end %>
+	<%console%>
+	<% @user.return_three_most_recent_posts.each do |post| %>
+	  <div class="post-list border">
+		  <div>
+			  <a href="/users/<%= @user.id %>/posts/<%= post.id %>">
+			    <h3><%= post.Title %></h3>
+			  </a>
+			  <p><%= post.Text %></p>
+			</div>
+			<p>Comments: <%= post.CommentsCounter || 0%>, Likes: <%= post.LikesCounter || 0%></p>
+		</div>
 	<% end %>
 	kjhgf
 </div>
