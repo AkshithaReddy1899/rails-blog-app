@@ -3,7 +3,7 @@
 		<%= image_tag("user.png")%>
 	</div>
 	<div class="user-text border">
-		<h2 class="user-heading"><%= link_to user.Name, "/users/#{user.id}"%></h2>
+		<h2 class="user-heading"><%= link_to user.Name, user%></h2>
 		<p class="user-posts">Number of posts: <%= user.PostsCounter%></p>
 	</div>
 </div>
