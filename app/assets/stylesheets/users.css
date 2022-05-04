@@ -69,3 +69,30 @@ hr {
 .comments-container {
 	margin: 15px;
 }
+
+.button-container {
+	margin: 20px auto;
+	width: 120px;
+	height: 80px;
+}
+
+.button {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+.post-comments-likes {
+	margin: 0;
+	padding: 0;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.comment-text {
+	margin: 10px auto;
+	text-align: center;
+}

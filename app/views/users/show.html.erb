@@ -15,7 +15,6 @@
 			<p>Bio</p>
 			<p><%= @user.Bio %></p>
 		</div>
-		<% console %>
 		<% @user.return_three_most_recent_posts.each do |post| %>
 			<div class="post-list border">
 				<div>
@@ -27,5 +26,8 @@
 				<p>Comments: <%= post.CommentsCounter || 0%>, Likes: <%= post.LikesCounter || 0%></p>
 			</div>
 		<% end %>
+		<div class="button-container">
+		  <a href="/users/<%= @user.id %>/posts" class="button">See all posts</a>
+		</div>
 	</div>
 </div>
