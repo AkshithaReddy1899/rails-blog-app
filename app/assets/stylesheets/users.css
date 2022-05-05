@@ -137,3 +137,15 @@ hr {
   margin: 5px auto;
   overflow: hidden;
 }
+
+.comment-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px auto;
+}
+
+.comment-form .submit-btn {
+  width: 120px;
+}
