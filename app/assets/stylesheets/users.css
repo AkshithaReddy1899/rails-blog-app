@@ -1,6 +1,6 @@
 .main-container {
-  margin: 20px;
-  padding: 20px;
+  margin: 90px auto 30px auto;
+  width: 80%;
 }
 
 .users-container {
@@ -89,4 +89,51 @@ hr {
 .comment-text {
   margin: 10px auto;
   text-align: center;
+}
+
+.new {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.new-link {
+  color: darkslategrey;
+  border: 1px solid grey;
+  text-decoration: none;
+  width: 200px;
+  padding: 8px;
+  margin: 15px auto;
+  background-color: antiquewhite;
+}
+
+.form {
+  width: 60%;
+  margin: 10px auto;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input {
+  margin: 15px;
+  width: 70%;
+}
+
+.input-area {
+  min-height: 100px;
+}
+
+.submit-btn {
+  width: 200px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.post-text-few {
+  height: 60px;
+  width: 90%;
+  margin: 5px auto;
+  overflow: hidden;
 }
