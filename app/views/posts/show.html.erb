@@ -8,7 +8,7 @@
 	  <p class="comment-text"><%=@post.Text%></p>
 		<hr>
 		<div>
-		  <%=link_to 'Add a new comment', comments_new_path %>
+		  <%=link_to 'Add a new comment', comments_new_path(@post.id), method: :get %>
 		</div>
 		<div class="comments">
 		  <% @post.comments.each do |comment| %>
