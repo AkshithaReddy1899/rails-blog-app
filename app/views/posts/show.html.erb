@@ -7,6 +7,9 @@
 		<hr>
 	  <p class="comment-text"><%=@post.Text%></p>
 		<hr>
+		<div>
+		  <%=link_to 'Add a new comment', comments_new_path %>
+		</div>
 		<div class="comments">
 		  <% @post.comments.each do |comment| %>
 			  <p><%=comment.author.Name%> :  <%=comment.Text%> </p>
