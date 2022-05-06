@@ -7,6 +7,7 @@
 		<hr>
 	  <p class="comment-text"><%=@post.Text%></p>
 		<hr>
+
 		<section class="like">
 		  <p class="like-btn-container">
 			  <%= form_with model: @like , url:"#{@post.id}/likes" do |f| %>
@@ -14,20 +15,16 @@
 				<% end %>
 			</p>
 		</section>
+
 		<div class="comments">
 		  <% @post.comments.each do |comment| %>
 			  <p><%=comment.author.Name%> :  <%=comment.Text%> </p>
 			<%end%>
 			<div>
-		  <%= form_with model: @comment, url: user_post_comments_path(@post.author_id, @post.id), method: :get do |f|%>
-	      <div class="comment-form">
-	        <%= f.text_field :Title, placeholder: "Add your comment", required: true, class: "input" %>
-		      <%= f.submit "Post", placeholder: "Submit", class: "submit-btn" %>
-		    </div>
-	   <%end%>
-		</div>
-		</div>
+			<%= form_with model: @comment, url: user_post_comments_path(post_id: @post.id), class: "comment-form" do |form| %>
+          <%= form.text_field :text , placeholder: "Add comment" %> <br>
+          <%= form.submit "Submit", class: "btn" %>
+     <% end %>
+	</div>
 	</div>
 </div>
-
-<%console%>
