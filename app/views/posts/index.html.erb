@@ -11,6 +11,9 @@
 		    </div>
 			</section>
 		</div>
+		<section class="new">
+		  <h3><%= link_to 'Create a new post', new_user_post_path, method: :get, class:"new-link"%></h3>
+		</section>
 		<section>
 		  <% @user.posts.each.with_index do |p, index| %>
 				<div class="border">
@@ -18,11 +21,17 @@
 					<div><p class="post-text"><%=p.Text%></p></div>
 					<small class="post-commwnts-likes">Comments: <%= p.CommentsCounter || 0%>, Likes: <%=p.LikesCounter || 0%></small>
 					<hr/>
-					<%p.return_five_most_recent_comments.each do |comment| %>
-						<div class="comments-container">
-							<%=comment.author.Name%> : <%=comment.Text%>
-						</div>
-					<% end %>
+					<div class="comments-container">
+					  <% if p.comments.blank?%>
+				 	    <p>No comments yet....</p>
+						<%else%>
+						  <%p.return_five_most_recent_comments.each do |comment| %>
+						    <div class="comments-container">
+							    <%=comment.author.Name%> : <%=comment.Text%>
+						    </div>
+					    <% end %>
+					  <%end%>
+					</div>
 				</div>
 		  <% end %>
 		</section>

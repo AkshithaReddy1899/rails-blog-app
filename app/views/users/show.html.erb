@@ -19,7 +19,7 @@
 			<div class="post-list border">
 				<div>
 						<h3><%= link_to post.Title, user_posts_path(@user)%></h3>
-					<p><%= post.Text %></p>
+					<p class="post-text-few"><%= post.Text %></p>
 				</div>
 				<p>Comments: <%= post.CommentsCounter || 0%>, Likes: <%= post.LikesCounter || 0%></p>
 			</div>
