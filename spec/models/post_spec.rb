@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   before do
-    :all
     @post = Post.new(Title: 'Hello', Text: 'Hello World!', CommentsCounter: 2, LikesCounter: 0, author_id: 3)
   end
 
