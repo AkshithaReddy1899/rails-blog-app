@@ -1,12 +1,12 @@
 <div class="main-container">
   <h1>Create a new post</h1>
-	<%= form_with model: @post, url: user_posts_path(@user.id) do |f|%>
+	<%= form_with :model => [ @user, @user.posts.build ] do |f| %>
 	  <div class="form">
 	    <%= f.text_field :Title, placeholder: "Title", required: true, class: "input" %>
 		  <%= f.text_area :Text, placeholder: "Post text", required: true, class: "input input-area" %>
-			<%= f.text_field :author_id, :type => 'hidden', :value => @user.id
- %>			
+			<%= f.text_field :author_id, :type => 'hidden'%>			
 		  <%= f.submit "Post", placeholder: "Submit", class: "submit-btn" %>
 		</div>
 	<%end%>
 </div>
+<%console%>

@@ -10,6 +10,12 @@ class CommentsController < ApplicationController
     @comment.post_id = @post.id
     @comment.Text = params[:text]
 
-    redirect_to "/users/#{params[:user_id]}/posts/#{params[:post_id]}" if @comment.save
+    if @comment.save
+      flash[:notice] = 'Comment added.'
+      redirect_to "/users/#{params[:user_id]}/posts/#{params[:post_id]}"
+    else
+      flash[:alert] = "Comment not added. Try again."
+      redirect_to "/users/#{current_user.id}/posts}"
+    end
   end
 end
