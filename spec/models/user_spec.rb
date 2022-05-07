@@ -1,20 +1,24 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', type: :request do
-  describe 'http request' do
-    before(:example) { get "/users" }
+RSpec.describe User, type: :model do
 
-    it 'response status is correct' do
-      get '/users/index'
-      expect(response).to have_http_status(:success)
-      expect(response).to have_http_status(200)
+  before(:all) do
+    @user = User.new(Name: "Tom", Photo: 'user.png', Bio: 'Teacher from Mexico', PostsCounter: 1)
+  end
+
+  context 'User validation test' do
+    it 'ensures Name presence' do
+      @user.Name = ''
+      expect(@user).to_not be_valid
     end
 
-    it 'returns http success' do
-      get '/users/show'
-      expect(response).to have_http_status(:success)
-    it 'renders correct template' do
-      expect(response).to render_template('index')
+    it 'ensures PostsCounter greater than equal to 0' do
+      expect(@user.PostsCounter).to be >= 0
     end
   end
-end
+
+  it 'User returns three most recent posts' do
+    length = @user.return_three_most_recent_posts.length
+    expect(length).to be <= 3
+  end
+end 
