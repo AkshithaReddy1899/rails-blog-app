@@ -1,0 +1,3 @@
+ else
+          redirect_to "/users/#{current_user.id}/posts/new"
+          flash[:alert] = 'Error! Post not saved try again.'
