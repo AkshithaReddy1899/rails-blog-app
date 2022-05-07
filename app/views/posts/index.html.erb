@@ -15,7 +15,7 @@
 		  <h3><%= link_to 'Create a new post', new_user_post_path, method: :get, class:"new-link"%></h3>
 		</section>
 		<section>
-		  <% @user.posts.each.with_index do |p, index| %>
+		  <% @posts.each.with_index do |p, index| %>
 				<div class="border">
 					<p><b>Post# <%= link_to index+1, "/users/#{@user.id}/posts/#{p.id}"%></b></p>
 					<div><p class="post-text"><%=p.Text%></p></div>
