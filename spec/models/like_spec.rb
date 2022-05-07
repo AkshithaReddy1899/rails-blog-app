@@ -2,8 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Like, type: :model do
   describe 'Likes counter' do
-    before do(:all)
-      @post = Post.new(Title: "Title of post", Text: "Text of post", CommentsCounter: 2, LikesCounter: 1, author_id: 3)
+    before do
+      :all
+      @post = Post.new(Title: 'Title of post', Text: 'Text of post', CommentsCounter: 2, LikesCounter: 1,
+                       author_id: 3)
       @like = Like.new(author_id: 3, post: @post)
     end
 
@@ -13,4 +15,4 @@ RSpec.describe Like, type: :model do
       expect(@post.LikesCounter).to eq(old_likes + 1)
     end
   end
-end 
+end

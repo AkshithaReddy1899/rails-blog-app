@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   before(:all) do
-    @user = User.new(Name: "Tom", Photo: 'user.png', Bio: 'Teacher from Mexico', PostsCounter: 1)
+    @user = User.new(Name: 'Tom', Photo: 'user.png', Bio: 'Teacher from Mexico', PostsCounter: 1)
   end
 
   context 'User validation test' do
@@ -21,4 +20,4 @@ RSpec.describe User, type: :model do
     length = @user.return_three_most_recent_posts.length
     expect(length).to be <= 3
   end
-end 
+end

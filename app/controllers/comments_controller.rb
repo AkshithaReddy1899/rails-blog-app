@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
       flash[:notice] = 'Comment added.'
       redirect_to "/users/#{params[:user_id]}/posts/#{params[:post_id]}"
     else
-      flash[:alert] = "Comment not added. Try again."
+      flash[:alert] = 'Comment not added. Try again.'
       redirect_to "/users/#{current_user.id}/posts}"
     end
   end

@@ -17,10 +17,10 @@ class PostsController < ApplicationController
     @new_post.LikesCounter = 0
     @new_post.CommentsCounter = 0
     if @new_post.save
-       redirect_to "/users/#{@new_post.author.id}.posts/", notice: 'Success!'
-     else
+      redirect_to "/users/#{@new_post.author.id}.posts/", notice: 'Success!'
+    else
       render :new, alert: 'Error! Post not saved try again.'
-     end
+    end
   end
 
   private
