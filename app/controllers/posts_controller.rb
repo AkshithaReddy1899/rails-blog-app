@@ -8,12 +8,12 @@ class PostsController < ApplicationController
   end
 
   def new
+    @user = User.find(params[:user_id])
     @post = Post.new
-    @user = current_user
   end
 
   def create
-    @new_post = current_user.posts.new(post_params)
+    @new_post = Post.new(post_params)
     respond_to do |format|
       format.html do
         if @new_post.save
@@ -28,6 +28,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:Title, :Text)
+    params.require(:post).permit(:Title, :Text, :author_id)
   end
 end

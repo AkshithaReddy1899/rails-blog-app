@@ -4,6 +4,8 @@
 	  <div class="form">
 	    <%= f.text_field :Title, placeholder: "Title", required: true, class: "input" %>
 		  <%= f.text_area :Text, placeholder: "Post text", required: true, class: "input input-area" %>
+			<%= f.text_field :author_id, :type => 'hidden', :value => @user.id
+ %>			
 		  <%= f.submit "Post", placeholder: "Submit", class: "submit-btn" %>
 		</div>
 	<%end%>
