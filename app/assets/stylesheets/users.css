@@ -1,6 +1,10 @@
-.main-container {
-  margin: 90px auto 30px auto;
-  width: 80%;
+nav {
+  padding: 20px;
+}
+
+.content {
+  text-align: center;
+  margin: 30px auto 5px auto;
 }
 
 .users-container {
@@ -117,8 +121,8 @@ hr {
 }
 
 .input {
-  margin: 15px;
-  width: 70%;
+  margin: 0 auto 15px auto;
+  padding: 5px;
 }
 
 .input-area {
@@ -148,4 +152,23 @@ hr {
 
 .comment-form .submit-btn {
   width: 120px;
+}
+
+.nav-btn-container {
+  width: 200px;
+}
+
+.nav-btn {
+  width: 80px;
+}
+
+.sign-up-in-container {
+  width: 320px;
+  height: auto;
+  margin: 10px auto;
+  padding: 40px;
+}
+
+.form-control {
+  margin-top: 10px;
 }
