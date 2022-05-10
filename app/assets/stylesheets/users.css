@@ -7,6 +7,11 @@ nav {
   margin: 30px auto 5px auto;
 }
 
+.user-details {
+  margin: 60px auto 5px auto;
+  width: 80%;
+}
+
 .users-container {
   padding: 20px;
   margin: 10px;
@@ -105,7 +110,7 @@ hr {
   border: 1px solid grey;
   text-decoration: none;
   width: 200px;
-  padding: 8px;
+  padding: 5px;
   margin: 15px auto;
   background-color: antiquewhite;
 }

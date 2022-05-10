@@ -15,11 +15,6 @@
   </head>
 
   <body>
-    <% flash.each do |type, msg| %>
-      <div class="flash">
-        <%= msg %>
-      </div>
-    <%end%>
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>
