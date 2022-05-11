@@ -1,5 +1,21 @@
-.main-container {
-  margin: 90px auto 30px auto;
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  padding: 20px;
+}
+
+.content {
+  text-align: center;
+  margin: 30px auto 5px auto;
+}
+
+.user-details {
+  margin: 60px auto 5px auto;
   width: 80%;
 }
 
@@ -101,7 +117,7 @@ hr {
   border: 1px solid grey;
   text-decoration: none;
   width: 200px;
-  padding: 8px;
+  padding: 5px;
   margin: 15px auto;
   background-color: antiquewhite;
 }
@@ -117,8 +133,8 @@ hr {
 }
 
 .input {
-  margin: 15px;
-  width: 70%;
+  margin: 0 auto 15px auto;
+  padding: 5px;
 }
 
 .input-area {
@@ -148,4 +164,23 @@ hr {
 
 .comment-form .submit-btn {
   width: 120px;
+}
+
+.nav-btn-container {
+  width: 200px;
+}
+
+.nav-btn {
+  width: 80px;
+}
+
+.sign-up-in-container {
+  width: 320px;
+  height: auto;
+  margin: 10px auto;
+  padding: 40px;
+}
+
+.form-control {
+  margin-top: 10px;
 }
