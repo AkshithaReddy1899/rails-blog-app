@@ -103,6 +103,10 @@ GEM
       reline (>= 0.2.7)
     diff-lcs (1.5.0)
     digest (3.1.0)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     ffi (1.15.5-x64-mingw32)
     globalid (1.0.0)
@@ -281,6 +285,7 @@ DEPENDENCIES
   capybara
   debug
   devise!
+  dotenv-rails
   ffi
   importmap-rails
   jbuilder
