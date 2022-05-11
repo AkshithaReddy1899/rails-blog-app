@@ -37,8 +37,12 @@ The Blog app will be a classic example of a blog website. You will create a full
 👤 **Akshitha Reddy**
 
 - GitHub: [@AkshithaReddy1899](https://github.com/AkshithaReddy1899)
-- Twitter: [@Aksha1899](https://twitter.com/Aksha1899)
 - LinkedIn: [Akshitha Reddy](https://www.linkedin.com/in/akshitha-reddy-716944198/)
+
+👤 **Akshitha Reddy**
+
+- GitHub: [@billionsjoel](https://github.com/billionsjoel)
+- LinkedIn: [Billionsjoel](https://www.linkedin.com/in/billionsjoel/)
 
 ## 🤝 Contributing
 
