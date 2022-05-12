@@ -18,7 +18,9 @@
 		  <% @posts.each.with_index do |p, index| %>
 				<div class="border">
 					<p><b>Post# <%= link_to index+1, "/users/#{@user.id}/posts/#{p.id}"%></b></p>
-					<div><p class="post-text"><%=p.Text%></p></div>
+					<div>
+					  <p class="post-text"><%=p.Text.length < 100 ? p.Text.html_safe: truncate(p.Text.html_safe, length: 100, omission: '...') %></p>
+					</div>
 					<small class="post-commwnts-likes">Comments: <%= p.CommentsCounter || 0%>, Likes: <%=p.LikesCounter || 0%></small>
 					<hr/>
 					<div class="comments-container">

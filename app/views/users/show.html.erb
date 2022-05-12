@@ -19,7 +19,7 @@
 			<div class="post-list border">
 				<div>
 						<h3><%= link_to post.Title, user_post_path(@user.id, post.id)%></h3>
-					<p class="post-text-few"><%= post.Text %></p>
+					<p class="post-text"><%=post.Text.length < 100 ? post.Text.html_safe: truncate(p.Text.html_safe, length: 100, omission: '...') %></p>
 				</div>
 				<p>Comments: <%= post.CommentsCounter || 0%>, Likes: <%= post.LikesCounter || 0%></p>
 			</div>
