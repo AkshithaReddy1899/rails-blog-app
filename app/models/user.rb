@@ -3,8 +3,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable
 
-  roles = %i[admin user].freeze
-
   has_many :posts, foreign_key: 'author_id'
   has_many :likes, foreign_key: 'author_id'
   has_many :comments, foreign_key: 'author_id'
