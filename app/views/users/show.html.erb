@@ -18,7 +18,7 @@
 		<% @user.return_three_most_recent_posts.each do |post| %>
 			<div class="post-list border">
 				<div>
-						<h3><%= link_to post.Title, user_posts_path(@user)%></h3>
+						<h3><%= link_to post.Title, user_post_path(@user.id, post.id)%></h3>
 					<p class="post-text-few"><%= post.Text %></p>
 				</div>
 				<p>Comments: <%= post.CommentsCounter || 0%>, Likes: <%= post.LikesCounter || 0%></p>
