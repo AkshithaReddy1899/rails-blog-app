@@ -46,5 +46,7 @@ RSpec.feature "PostIndices", type: :feature do
       end
       expect(page).to have_content(post)
     end
+    
+    it "See the first comment"
   end
 end
