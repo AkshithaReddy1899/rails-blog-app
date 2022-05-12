@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
@@ -21,6 +23,21 @@ class PostsController < ApplicationController
       redirect_to "/users/#{@new_post.author.id}.posts/", notice: 'Success!'
     else
       render :new, alert: 'Error! Post not saved try again.'
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    user = User.find(@post.author_id)
+    @post.destroy
+    if @post.destroy
+      user.PostsCounter -= 1
+      user.save
+      flash[:notice] = 'You have deleted this post successfully!'
+      redirect_to user_posts_path(user.id)
+    else
+      flash[:alert] = 'Post not deleted. Try again'
+      redirect_to user_post_path(@post.author_id)
     end
   end
 

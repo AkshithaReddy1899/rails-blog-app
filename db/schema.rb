@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_510_092_808) do
+ActiveRecord::Schema[7.0].define(version: 20_220_512_084_747) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -44,6 +44,16 @@ ActiveRecord::Schema[7.0].define(version: 20_220_510_092_808) do
     t.index ['author_id'], name: 'index_posts_on_author_id'
   end
 
+  create_table 'roles', force: :cascade do |t|
+    t.string 'name'
+    t.string 'resource_type'
+    t.bigint 'resource_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index %w[name resource_type resource_id], name: 'index_roles_on_name_and_resource_type_and_resource_id'
+    t.index %w[resource_type resource_id], name: 'index_roles_on_resource'
+  end
+
   create_table 'users', force: :cascade do |t|
     t.string 'Name'
     t.string 'Photo'
@@ -60,6 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 20_220_510_092_808) do
     t.datetime 'confirmed_at'
     t.datetime 'confirmation_sent_at'
     t.string 'unconfirmed_email'
+    t.string 'role'
     t.index ['confirmation_token'], name: 'index_users_on_confirmation_token', unique: true
     t.index ['email'], name: 'index_users_on_email', unique: true
     t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true

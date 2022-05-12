@@ -12,6 +12,8 @@
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Enter your email",class: "form-control", required: true %>
         <br/>
 
+        <%= f.hidden_field :role, value: 'admin' %>
+
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %><br />
