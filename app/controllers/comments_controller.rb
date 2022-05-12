@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
   def new
     @comment = Comment.new
   end
@@ -27,12 +29,11 @@ class CommentsController < ApplicationController
     if @comment.destroy
       @post.CommentsCounter -= 1
       user.save
-      flash[:notice] = "You have deleted this comment successfully!"
+      flash[:notice] = 'You have deleted this comment successfully!'
       redirect_to user_posts_path(user.id)
     else
       flash[:alert] = 'Comment not deleted. Try again'
       redirect_to user_post_path(@post.author_id)
     end
   end
-
 end

@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
@@ -31,7 +33,7 @@ class PostsController < ApplicationController
     if @post.destroy
       user.PostsCounter -= 1
       user.save
-      flash[:notice] = "You have deleted this post successfully!"
+      flash[:notice] = 'You have deleted this post successfully!'
       redirect_to user_posts_path(user.id)
     else
       flash[:alert] = 'Post not deleted. Try again'

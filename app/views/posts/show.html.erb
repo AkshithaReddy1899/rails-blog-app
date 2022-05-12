@@ -19,7 +19,9 @@
 		<div class="comments">
 		  <% @post.comments.each do |comment| %>
 			  <p><%=comment.author.Name%> :  <%=comment.Text%> <%=comment.id%> post<%=@post.id%> user <%=@post.author_id%> </p>
+				<% if can? :destroy, @comment %>
 		      <%= button_to "Delete comment", "/users/#{@post.author_id}/posts/#{@post.id}/comments/#{comment.id}" , method: :delete %>
+				<%end%>
 			<%end%>
 			<div>
 			<%= form_with model: @comment, url: user_post_comments_path(post_id: @post.id), class: "comment-form" do |form| %>
@@ -29,7 +31,8 @@
 	</div>
 	</div>
 </div>
-<div class="delete-container">
-	<%= button_to "Delete post", user_post_path(@post.author_id, @post.id), method: :delete %>
-</div>
-<%console%>
+<% if can? :destroy, @post %>
+  <div class="delete-container">
+	  <%= button_to "Delete post", user_post_path(@post.author_id, @post.id), method: :delete %>
+  </div>
+<%end%>

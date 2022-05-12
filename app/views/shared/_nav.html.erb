@@ -13,11 +13,19 @@
           <a class="nav-link" href="#">Link</a>
         </li>
       </ul>
-      <div class="d-flex flex-column flex-lg-row nav-btn-container">
-				<%= link_to "Login", new_user_session_path, class:"btn btn-secondary nav-btn" %>
+      <% if signed_in? %>
+        <div class="d-flex flex-column flex-lg-row nav-btn-container">
+				  <%= link_to "#{current_user.Name}", user_posts_path(current_user), class:"btn btn-secondary nav-btn" %>
+				  &nbsp;
+				  <%= link_to "Log out", destroy_user_session_path, method: :delete ,class: "btn btn-secondary" %>
+        </div>
+      <% else %>
+        <div class="d-flex flex-column flex-lg-row nav-btn-container">
+				  <%= link_to "Login", new_user_session_path, class:"btn btn-secondary nav-btn" %>
 				&nbsp;
-				<%= link_to "Sign up", new_user_registration_path, class: "btn btn-secondary nav-btn" %>
-      </div>
+				  <%= link_to "Sign up", new_user_registration_path, class: "btn btn-secondary nav-btn" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </nav>
