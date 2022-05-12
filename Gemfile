@@ -84,3 +84,5 @@ gem 'devise', github: 'heartcombo/devise', ref: 'f8d1ea90bc3'
 gem 'letter_opener', group: :development
 
 gem 'dotenv-rails'
+
+gem 'cancancan', '~> 3.3'
