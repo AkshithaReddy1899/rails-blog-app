@@ -15,9 +15,9 @@
 		  <h6><%= link_to 'Create a new post', new_user_post_path, method: :get, class:"new-link"%></h6>
 		</section>
 		<section>
-		  <% @posts.each.with_index do |p, index| %>
+		  <% @posts.each do |p| %>
 				<div class="border">
-					<p><b>Post# <%= link_to index+1, "/users/#{@user.id}/posts/#{p.id}"%></b></p>
+					<p><b><%= link_to p.Title, "/users/#{@user.id}/posts/#{p.id}"%></b></p>
 					<div>
 					  <p class="post-text"><%=p.Text.length < 100 ? p.Text.html_safe: truncate(p.Text.html_safe, length: 100, omission: '...') %></p>
 					</div>
