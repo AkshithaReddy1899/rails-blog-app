@@ -147,13 +147,6 @@ hr {
   padding: 5px;
 }
 
-.post-text-few {
-  height: 60px;
-  width: 90%;
-  margin: 5px auto;
-  overflow: hidden;
-}
-
 .comment-form {
   display: flex;
   flex-direction: row;

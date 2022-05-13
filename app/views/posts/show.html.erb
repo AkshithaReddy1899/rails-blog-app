@@ -1,7 +1,7 @@
 <div class="main-container">
   <div class="border">
 	  <div class="title">
-	    <p><b>Post# <%= @post.Title%></b> by <b><%= @post.author.Name%></b></p>
+	    <p><b><%= @post.Title%></b> by <b><%= @post.author.Name%></b></p>
 		  <small class="post-comments-likes">Comments: <%= @post.CommentsCounter || 0%>, Likes: <%=@post.LikesCounter || 0%></small>
 		</div>
 		<hr>
@@ -18,7 +18,7 @@
 
 		<div class="comments">
 		  <% @post.comments.each do |comment| %>
-			  <p><%=comment.author.Name%> :  <%=comment.Text%> <%=comment.id%> post<%=@post.id%> user <%=@post.author_id%> </p>
+			  <p><%=comment.author.Name%> :  <%=comment.Text%></p>
 				<% if can? :destroy, @comment %>
 		      <%= button_to "Delete comment", "/users/#{@post.author_id}/posts/#{@post.id}/comments/#{comment.id}" , method: :delete %>
 				<%end%>

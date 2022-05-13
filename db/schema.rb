@@ -44,16 +44,6 @@ ActiveRecord::Schema[7.0].define(version: 20_220_512_084_747) do
     t.index ['author_id'], name: 'index_posts_on_author_id'
   end
 
-  create_table 'roles', force: :cascade do |t|
-    t.string 'name'
-    t.string 'resource_type'
-    t.bigint 'resource_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index %w[name resource_type resource_id], name: 'index_roles_on_name_and_resource_type_and_resource_id'
-    t.index %w[resource_type resource_id], name: 'index_roles_on_resource'
-  end
-
   create_table 'users', force: :cascade do |t|
     t.string 'Name'
     t.string 'Photo'
