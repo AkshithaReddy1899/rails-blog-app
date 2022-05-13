@@ -21,6 +21,7 @@ The Blog app will be a classic example of a blog website. You will create a full
 3. Create database by running `rails db:create`
 4. Run migrations `rails db:migrate`
 5. To start the server `rails s`
+6. To run tests `rspec`
 
 ### Prerequisites
 
