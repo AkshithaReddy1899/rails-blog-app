@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.feature "Sessions", type: :feature do
-  describe "login page" do
+RSpec.feature 'Sessions', type: :feature do
+  describe 'login page' do
     before(:each) do
-      User.create! Name: "Test", email: "test@gmail.com", password: "123456", confirmed_at: Time.now
-      visit new_user_session_path  
+      User.create! Name: 'Test', email: 'test@gmail.com', password: '123456', confirmed_at: Time.now
+      visit new_user_session_path
     end
     it 'I can see the username and password inputs and the "Submit" button.' do
       expect(page).to have_field('Enter your email')

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "Indices", type: :feature do
-  describe "Index page" do
+RSpec.feature 'Indices', type: :feature do
+  describe 'Index page' do
     before(:each) do
       @user1 = User.create! Name: 'User 1', email: 'user@gmail.com', password: '123456', confirmed_at: Time.now
       @user2 = User.create! Name: 'User 2', email: 'user2@gmail.com', password: '123456', confirmed_at: Time.now
@@ -9,8 +9,8 @@ RSpec.feature "Indices", type: :feature do
       @post1 = Post.create(Title: 'Post', Text: 'post text', author: @user1, CommentsCounter: 0, LikesCounter: 0)
 
       visit new_user_session_path
-      fill_in "Enter your email", with: 'user@gmail.com'
-      fill_in "Enter your password", with: '123456'
+      fill_in 'Enter your email', with: 'user@gmail.com'
+      fill_in 'Enter your password', with: '123456'
       click_button 'Log in'
       visit root_path
     end
