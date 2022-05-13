@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+# rubocop:disable Metrics/BlockLength
 RSpec.feature 'PostIndex', type: :feature do
   describe 'Post index page' do
     before(:each) do
@@ -46,12 +46,11 @@ RSpec.feature 'PostIndex', type: :feature do
     end
 
     it "See some of post's body" do
-      post = if @post1.Text.length < 100
-               expect(page).to have_content(@post4.Text)
-               @post1.Text
-             else
-               expect(page).to have_content(truncate(@post4.Text, length: 100, omission: '...'))
-             end
+      if @post4.Text.length < 100
+        expect(page).to have_content(@post4.Text)
+      else
+        expect(page).to have_content(truncate(@post4.Text, length: 100, omission: '...'))
+      end
     end
 
     it 'See the first comment of a post' do
@@ -76,3 +75,5 @@ RSpec.feature 'PostIndex', type: :feature do
     end
   end
 end
+
+# rubocop:enable Metrics/BlockLength

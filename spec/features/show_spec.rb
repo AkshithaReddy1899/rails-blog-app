@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
+
 RSpec.feature 'Shows', type: :feature do
   describe 'Show page' do
     before(:each) do
@@ -58,3 +60,5 @@ RSpec.feature 'Shows', type: :feature do
     end
   end
 end
+
+# rubocop:enable Metrics/BlockLength

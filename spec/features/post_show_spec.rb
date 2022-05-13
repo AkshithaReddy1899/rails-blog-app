@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
+
 RSpec.feature 'PostShowSpec.rbs', type: :feature do
   describe 'Post show page' do
     before(:each) do
@@ -47,3 +49,5 @@ RSpec.feature 'PostShowSpec.rbs', type: :feature do
     end
   end
 end
+
+# rubocop:enable Metrics/BlockLength
