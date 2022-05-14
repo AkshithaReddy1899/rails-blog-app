@@ -90,3 +90,7 @@ gem 'cancancan', '~> 3.3'
 gem 'cleanup'
 
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
+
+gem 'rack-cors'
+
+gem 'devise-jwt'
